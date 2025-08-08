@@ -1,3 +1,4 @@
+const keep_alive = require('./keep_alive.js');
 const { Client, GatewayIntentBits, Partials, Collection, Events } = require('discord.js');
 const fs = require('fs');
 const dotenv = require('dotenv');
@@ -55,4 +56,5 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 }).catch(err => {
   console.error("❌ Error conectando a MongoDB:", err);
 });
+
 
